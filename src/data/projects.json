@@ -1,0 +1,72 @@
+[
+  {
+    "id": "unified-inbox",
+    "name": "Unified Inbox (UAI)",
+    "category": "Enterprise SaaS",
+    "problem": "Enterprise clients needed a single, AI-augmented inbox to unify fragmented customer conversations across channels — but requirements were scattered across stakeholders with no shared source of truth.",
+    "research": "Ran stakeholder interviews across client and engineering teams; mapped existing workflows and UI pain points to identify where AI could realistically remove manual triage effort.",
+    "solution": "Structured business and functional requirements into user stories, workflows and feature specs that engineering could build against directly, including AI-assisted triage use cases.",
+    "execution": "Coordinated with AI and engineering teams on functional documentation, sprint scoping and UI enhancement rollout.",
+    "contribution": "End-to-end requirement gathering, workflow definition, user story authorship, and stakeholder alignment as lead BA.",
+    "impact": "Reduced requirement ambiguity across enterprise rollout, tightening scope control and accelerating feature delivery.",
+    "tech": ["Requirements Engineering", "User Stories", "AI Use Cases", "Agile"],
+    "confidential": true
+  },
+  {
+    "id": "escra",
+    "name": "ESCRA",
+    "category": "Blockchain Platform",
+    "problem": "Blockchain-based workflows needed precise functional and technical framing to bridge client intent and development execution.",
+    "research": "Worked directly with client and dev teams to unpack blockchain-specific workflow requirements not covered by standard BA frameworks.",
+    "solution": "Framed functional and technical requirements for blockchain workflows, translating domain-specific logic into implementable specs.",
+    "execution": "Served as primary liaison between clients and developers; supported sprint planning and scope alignment in an Agile environment.",
+    "contribution": "Requirements analysis, documentation ownership, and cross-team liaison.",
+    "impact": "Kept blockchain workflow scope aligned across client and engineering, avoiding rework from misinterpreted requirements.",
+    "tech": ["Blockchain", "Agile", "Requirements Analysis"],
+    "confidential": true
+  },
+  {
+    "id": "sagint-os",
+    "name": "SAGINT — Tokenized Compliance System",
+    "category": "Government Compliance / Blockchain",
+    "problem": "Rare earth mineral supply chains needed a compliance system aligned to US government DFARS requirements — a highly confidential, high-stakes traceability problem.",
+    "research": "Analyzed DFARS compliance requirements and existing supply-chain verification gaps.",
+    "solution": "Contributed to compliance-focused documentation and blockchain-based tokenization mechanisms for supply chain verification.",
+    "execution": "Maintained requirement traceability across a confidential, government-aligned workstream.",
+    "contribution": "Compliance documentation and requirement traceability support on Sagint OS.",
+    "impact": "Supporting a nationally significant supply-chain verification initiative with audit-ready traceability.",
+    "tech": ["Blockchain", "Compliance (DFARS)", "Tokenization", "Supply Chain"],
+    "confidential": true
+  },
+  {
+    "id": "lifesaver",
+    "name": "LifeSaver — Blood Donation Inventory Management",
+    "category": "Final Year Project / Published Research",
+    "problem": "Blood banks and donors lacked a streamlined system for donor enrollment, appointment scheduling and inventory tracking.",
+    "research": "Studied donor engagement drop-off points and inventory tracking inefficiencies in existing blood bank systems.",
+    "solution": "Built a full MERN-stack blood inventory management system covering donor enrollment, scheduling and inventory tracking.",
+    "execution": "Solo-architected and developed the platform end-to-end; authored and published a research paper on the system.",
+    "contribution": "Full-stack development (MongoDB, Express.js, React.js, Node.js) plus authored research publication.",
+    "impact": "Improved donor engagement and inventory visibility; published in IRJMETS, Volume 06, Issue 01, 2023.",
+    "tech": ["MongoDB", "Express.js", "React.js", "Node.js"],
+    "confidential": false,
+    "publication": {
+      "title": "LifeSaver: Blood Donation Management System Web App using MERN Stack",
+      "venue": "International Research Journal of Modernization in Engineering Technology & Science (IRJMETS)",
+      "detail": "Volume 06, Issue 01, 2023"
+    }
+  },
+  {
+    "id": "codehub",
+    "name": "CodeHub",
+    "category": "E-Learning Platform",
+    "problem": "Beginners learning programming fundamentals needed a lightweight, dynamic platform to practice without friction.",
+    "research": "Benchmarked existing e-learning UX to identify what made lesson delivery feel sluggish or disconnected from practice.",
+    "solution": "Built a dynamic e-learning platform for programming fundamentals with MySQL-backed data management.",
+    "execution": "Integrated PHP for dynamic back-end functionality to ensure a seamless learning experience.",
+    "contribution": "Solo design and development of platform architecture and data layer.",
+    "impact": "Delivered a seamless, responsive learning experience for programming fundamentals.",
+    "tech": ["MySQL", "PHP"],
+    "confidential": false
+  }
+]

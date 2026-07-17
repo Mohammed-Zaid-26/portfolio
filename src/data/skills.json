@@ -1,0 +1,91 @@
+[
+  {
+    "category": "Business Thinking",
+    "color": "electric",
+    "description": "Turning stakeholder conversations into requirements engineering can build against.",
+    "appliedIn": ["Advanced Millennium Technologies (AMT)", "Axpro"],
+    "skills": [
+      "Requirement Gathering",
+      "Stakeholder Management",
+      "Business Process Mapping",
+      "Gap Analysis",
+      "User Stories",
+      "Acceptance Criteria",
+      "BRD Documentation",
+      "FRD Documentation",
+      "RTM",
+      "Use Case Development",
+      "UAT Support"
+    ]
+  },
+  {
+    "category": "Product Strategy",
+    "color": "signal",
+    "description": "Shaping strategy, roadmaps and prioritization around real user and market signal.",
+    "appliedIn": ["Qedence", "Axpro"],
+    "skills": [
+      "Product Strategy",
+      "Product Roadmaps",
+      "Feature Prioritization",
+      "User Research",
+      "Market Analysis",
+      "MVP Planning",
+      "Product Lifecycle Management",
+      "Agile Product Development"
+    ]
+  },
+  {
+    "category": "Technology Understanding",
+    "color": "electric",
+    "description": "Enough engineering fluency to write requirements that are actually buildable.",
+    "appliedIn": ["LifeSaver (MERN Stack)", "CodeHub"],
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Docker",
+      "JIRA",
+      "Confluence"
+    ]
+  },
+  {
+    "category": "Analytics",
+    "color": "vital",
+    "description": "Reading data to make decisions defensible, not just plausible.",
+    "appliedIn": ["Taipei Medical University — ICHIT Lab", "Qedence"],
+    "skills": [
+      "Business Analytics",
+      "Data Analysis",
+      "Data Interpretation",
+      "SQL",
+      "Power BI",
+      "Excel Analytics",
+      "Data Visualization"
+    ]
+  },
+  {
+    "category": "Healthcare Innovation",
+    "color": "vital",
+    "description": "Applying ML and structured research to real clinical and aging-care outcomes.",
+    "appliedIn": ["Taipei Medical University — ICHIT Lab"],
+    "skills": [
+      "Healthcare Data Analysis",
+      "Mortality Risk Prediction (ML)",
+      "Clinical Dataset Research",
+      "AI for Aging & Chronic Care",
+      "Cross-functional Research Collaboration"
+    ]
+  }
+]

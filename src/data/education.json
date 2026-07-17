@@ -1,0 +1,45 @@
+[
+  {
+    "institution": "Presidency University",
+    "degree": "Bachelor of Technology in Computer Engineering",
+    "period": "Aug 2020 – Nov 2024",
+    "coursework": [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Data Analytics",
+      "Deep Learning",
+      "Predictive Modeling",
+      "Statistical Analysis",
+      "Database Management Systems",
+      "Engineering Economics",
+      "Data Warehousing",
+      "Cloud Computing",
+      "Software Engineering",
+      "Web Technologies",
+      "Operating Systems",
+      "Business Intelligence Fundamentals"
+    ]
+  },
+  {
+    "institution": "Narayana PU College",
+    "degree": "Science (PCMC), Junior College",
+    "period": "Jun 2018 – Mar 2020",
+    "coursework": ["Physics", "Chemistry", "Mathematics", "Computer Science", "Statistics", "Logical Reasoning"]
+  },
+  {
+    "institution": "Oasis International School",
+    "degree": "IGCSE Curriculum",
+    "period": "Jun 2006 – Mar 2018",
+    "coursework": [
+      "Mathematics",
+      "Computer Science",
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Information & Communication Technology (ICT)",
+      "English",
+      "French",
+      "Arabic"
+    ]
+  }
+]

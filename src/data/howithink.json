@@ -1,0 +1,8 @@
+[
+  { "step": "Understand", "detail": "Sit with the business problem before touching a solution — talk to stakeholders, read the workflow, find where the friction actually lives." },
+  { "step": "Analyze", "detail": "Break the problem into requirements, gaps and constraints. Map process flows and surface what's assumed but never written down." },
+  { "step": "Strategize", "detail": "Prioritize by impact vs. effort. Decide what an MVP must prove before a roadmap gets built around it." },
+  { "step": "Build", "detail": "Translate strategy into user stories, acceptance criteria and specs engineering can execute against without ambiguity." },
+  { "step": "Measure", "detail": "Track adoption, KPIs and UAT feedback against the outcome the business actually needed, not just the shipped feature." },
+  { "step": "Improve", "detail": "Feed results back into the next iteration — a product is a loop, not a launch." }
+]

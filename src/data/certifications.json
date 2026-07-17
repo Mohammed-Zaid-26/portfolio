@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Getting Started as a Business Analyst",
+    "org": "LinkedIn Learning",
+    "skills": ["Business Analysis Fundamentals"],
+    "link": "https://drive.google.com/file/d/1HKLaVrBB97gaMH3dwpMK1iC0WhIzJpZt/view?usp=sharing"
+  },
+  {
+    "name": "AI in Digital Marketing",
+    "org": "Great Learning",
+    "skills": ["AI Applications", "Digital Marketing"],
+    "link": "https://drive.google.com/file/d/1FuTPbKWnBVQXjNwkIlhbWE8GkqXvfswN/view?usp=sharing"
+  },
+  {
+    "name": "Foundations of Project Management",
+    "org": "Google",
+    "skills": ["Project Management"],
+    "link": "https://drive.google.com/file/d/1lglR3fkx2VzgOhBgeHMsI1WcjzIrFJvi/view?usp=sharing"
+  },
+  {
+    "name": "Work Smarter with Microsoft Excel",
+    "org": "Microsoft",
+    "skills": ["Excel", "Data Analysis"],
+    "link": "https://drive.google.com/file/d/1dixuoLG3MJZLtc6EaVvpbDl2D-xnVbRO/view?usp=sharing"
+  },
+  {
+    "name": "Introduction to Web Development with HTML, CSS and JS",
+    "org": "IBM",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "link": "https://drive.google.com/file/d/12VH1hqWJEKw8Z74pjV4wqR-i0yzxU5dj/view?usp=sharing"
+  },
+  {
+    "name": "Foundations of User Experience (UX)",
+    "org": "Google",
+    "skills": ["UX Design"],
+    "link": "https://drive.google.com/file/d/1AXmcGJnaVx_DW9SEiepic28HTt5fV_ZJ/view?usp=sharing"
+  },
+  {
+    "name": "Introduction to SQL",
+    "org": "HackerRank",
+    "skills": ["SQL"],
+    "link": "https://drive.google.com/file/d/1I2VejCV88NZGK_g6ovRHTSlIs_mTQRap/view?usp=sharing"
+  },
+  {
+    "name": "Introduction to Cybersecurity",
+    "org": "CISCO",
+    "skills": ["Cybersecurity Fundamentals"],
+    "link": "https://drive.google.com/file/d/1W6uOIVK9WbUfUGyITXVVZB-LHUo50fiM/view?usp=sharing"
+  },
+  {
+    "name": "Oracle Database Foundations",
+    "org": "Oracle",
+    "skills": ["Database Fundamentals"],
+    "link": null
+  },
+  {
+    "name": "Machine Learning",
+    "org": "SkillUp",
+    "skills": ["Machine Learning"],
+    "link": null
+  }
+]

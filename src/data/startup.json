@@ -1,0 +1,28 @@
+{
+  "name": "Qedence",
+  "role": "Co-Founder | Product & Business Strategy",
+  "since": "Jan 2025",
+  "pitch": "I am working towards building Qedence, an entrepreneurial initiative focused on exploring innovative solutions and creating meaningful impact.",
+  "pillars": [
+    {
+      "stage": "Idea",
+      "title": "Where it started",
+      "detail": "Early-stage product discovery — taking an abstract concept and giving it enough shape to be tested against reality."
+    },
+    {
+      "stage": "Problem",
+      "title": "Validating the mindset",
+      "detail": "Business analytics discussions and problem validation, converting abstract ideas into structured, executable solutions."
+    },
+    {
+      "stage": "Opportunity",
+      "title": "Open to collaborate",
+      "detail": "Not just building solo — open to startup collaborations, product ideas, business opportunities and strategic partnerships."
+    },
+    {
+      "stage": "Future Vision",
+      "title": "Built for scale",
+      "detail": "Roadmap decisions shaped with a focus on scalability, optimized user flows and long-term viability."
+    }
+  ]
+}

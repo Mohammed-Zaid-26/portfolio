@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #fdfcfa;
+  color: #14161a;
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(49, 99, 221, 0.18);
+  color: #14161a;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #fdfcfa;
+}
+::-webkit-scrollbar-thumb {
+  background: #e9e6dc;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dcd8cc;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .kicker {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-electric-600;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl font-semibold leading-[1.1] tracking-tight text-ink-950 sm:text-4xl md:text-5xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-deepblue-600 via-electric-500 to-vital-500;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink-950 px-7 py-3.5 text-sm font-semibold text-paper-50 transition-colors duration-200 hover:bg-electric-600;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-950/20 px-7 py-3.5 text-sm font-semibold text-ink-950 transition-colors duration-200 hover:border-ink-950/40 hover:bg-ink-950/[0.03];
+  }
+
+  .btn-text {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-vital-600 transition-colors duration-200 hover:text-vital-500;
+  }
+
+  .tag {
+    @apply rounded-full border border-ink-950/10 px-3 py-1 text-[11px] font-medium text-ink-600;
+  }
+
+  .device-panel {
+    @apply rounded-2xl border border-ink-950/[0.07] bg-paper-50 shadow-[0_30px_70px_-30px_rgba(20,22,26,0.18)];
+  }
+
+  .rule {
+    @apply h-px w-full bg-ink-950/10;
+  }
+}
+
+.bg-fieldnotes {
+  background-image: radial-gradient(rgba(20, 22, 26, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Soft pastel ambient wash for the light theme — subtle, not a dark glow. */
+.ambient-wash {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ambient-wash::before,
+.ambient-wash::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.35;
+}
+.ambient-wash::before {
+  top: -12%;
+  right: -6%;
+  width: 42%;
+  height: 42%;
+  background: radial-gradient(circle, #cfe0ff, transparent 70%);
+}
+.ambient-wash::after {
+  bottom: -16%;
+  left: -8%;
+  width: 46%;
+  height: 46%;
+  background: radial-gradient(circle, #cdf3e3, transparent 70%);
+}

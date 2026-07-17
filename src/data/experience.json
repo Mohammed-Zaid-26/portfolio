@@ -1,0 +1,104 @@
+[
+  {
+    "company": "Advanced Millennium Technologies (AMT)",
+    "role": "Business Analyst",
+    "period": "Aug 2025 – Present",
+    "location": "Bengaluru, India",
+    "current": true,
+    "summary": "Core Business Analyst across multiple enterprise and product-focused initiatives at UIB — bridging clients, developers and internal stakeholders.",
+    "responsibilities": [
+      "Managed end-to-end requirement gathering, workflow definition, and stakeholder alignment for UIB.",
+      "Translated user feedback and business needs into clear, actionable product requirements for UI/UX enhancements.",
+      "Supported AI integration within the Unified Inbox product — use case definition, functional documentation, coordination with AI and engineering teams.",
+      "Acted as a bridge between clients, developers and internal stakeholders, ensuring requirement clarity, scope control and timely delivery."
+    ],
+    "projects": [
+      {
+        "name": "Unified Inbox (SaaS Product — UAI)",
+        "points": [
+          "Gathered and documented business and functional requirements for enterprise clients.",
+          "Created user stories, workflows and feature specifications to support product enhancements.",
+          "Supported UI improvements and AI-driven features through structured documentation and stakeholder coordination."
+        ]
+      },
+      {
+        "name": "ESCRA (Blockchain-based Platform)",
+        "points": [
+          "Served as the primary liaison between clients and development teams.",
+          "Gathered, analyzed and framed functional and technical requirements for blockchain workflows.",
+          "Supported sprint planning, documentation and scope alignment in an Agile environment."
+        ]
+      },
+      {
+        "name": "SAGINT — Tokenized Compliance System for Rare Earth Mineral Verification (SaaS product — Sagint OS)",
+        "points": [
+          "Working on a highly confidential blockchain compliance project aligned with US government DFARS requirements.",
+          "Contributing to compliance-focused documentation and maintaining requirement traceability.",
+          "Supporting blockchain-based tokenization mechanisms within supply chain verification."
+        ]
+      }
+    ],
+    "tech": ["Requirements Engineering", "Agile/Scrum", "Blockchain", "AI Integration", "JIRA", "Confluence"]
+  },
+  {
+    "company": "Qedence",
+    "role": "Co-Founder | Product & Business Strategy",
+    "period": "Jan 2025 – Present",
+    "location": "Bengaluru, India",
+    "current": true,
+    "summary": "Co-founded a high-potential product initiative positioned for startup scale-up.",
+    "responsibilities": [
+      "Led early-stage product discovery, problem validation and business requirement definition.",
+      "Conducted business analytics discussions to convert abstract ideas into structured, executable solutions.",
+      "Collaborated closely on feature planning, optimization of user flows and overall product vision.",
+      "Actively involved in shaping roadmap decisions with a focus on scalability and long-term viability."
+    ],
+    "projects": [],
+    "tech": ["Product Strategy", "Business Analytics", "Roadmapping", "Startup Ops"]
+  },
+  {
+    "company": "Axpro",
+    "role": "Business Analyst Intern",
+    "period": "Dec 2024 – Jun 2025",
+    "location": "Bengaluru, India",
+    "current": false,
+    "summary": "Contributed to product strategy discussions for enterprise SaaS platforms.",
+    "responsibilities": [
+      "Identified business opportunities, defined functional solutions, and supported roadmap planning for enterprise SaaS platforms.",
+      "Gathered and analyzed business requirements to support operational improvements and business decision-making.",
+      "Participated in a self-driven project initiative applying business analytics methodologies with future scalability potential."
+    ],
+    "projects": [],
+    "tech": ["Business Analytics", "Requirements Gathering", "SaaS"]
+  },
+  {
+    "company": "Taipei Medical University — ICHIT Lab",
+    "role": "Research Intern",
+    "period": "May 2024 – Jul 2024",
+    "location": "Taipei, Taiwan",
+    "current": false,
+    "summary": "Fully funded international research internship under the International Internship Pilot Program (IIPP).",
+    "responsibilities": [
+      "Conducted mortality risk prediction using hospice datasets from AMOR wellness watches.",
+      "Contributed to research papers and academic presentations with visualized findings.",
+      "Worked in a cross-functional team on AI innovation for aging and chronic care."
+    ],
+    "projects": [],
+    "tech": ["Machine Learning", "Healthcare Data", "Research", "Data Visualization"]
+  },
+  {
+    "company": "Maskan Technologies",
+    "role": "Blockchain Development Trainee",
+    "period": "Dec 2023 – Apr 2024",
+    "location": "Bengaluru, India",
+    "current": false,
+    "summary": "Led a team of interns building and hardening smart contracts.",
+    "responsibilities": [
+      "Led a team of interns in developing and modifying smart contracts.",
+      "Improved blockchain architecture for scalability, performance and security.",
+      "Gained hands-on experience with decentralized systems and deployment workflows."
+    ],
+    "projects": [],
+    "tech": ["Blockchain", "Smart Contracts", "Decentralized Systems"]
+  }
+]
