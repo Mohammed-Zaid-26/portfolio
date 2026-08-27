@@ -7,16 +7,18 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          50: "#fdfcfa",
-          100: "#faf8f4",
-          200: "#f3f1ea",
-          300: "#e9e6dc",
+          50: "rgb(var(--color-paper-50) / <alpha-value>)",
+          100: "rgb(var(--color-paper-100) / <alpha-value>)",
+          200: "rgb(var(--color-paper-200) / <alpha-value>)",
+          300: "rgb(var(--color-paper-300) / <alpha-value>)",
         },
         ink: {
-          950: "#14161a",
-          800: "#2b2e35",
-          600: "#585d68",
-          400: "#8b8f99",
+          950: "rgb(var(--color-ink-950) / <alpha-value>)",
+          800: "rgb(var(--color-ink-800) / <alpha-value>)",
+          700: "rgb(var(--color-ink-700) / <alpha-value>)",
+          600: "rgb(var(--color-ink-600) / <alpha-value>)",
+          500: "rgb(var(--color-ink-500) / <alpha-value>)",
+          400: "rgb(var(--color-ink-400) / <alpha-value>)",
         },
         deepblue: {
           600: "#1c3a7a",

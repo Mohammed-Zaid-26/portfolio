@@ -25,7 +25,7 @@ export default function Skills() {
         </h2>
       </Reveal>
 
-      <div className="relative mx-auto mt-20 max-w-3xl">
+      <div className="relative mx-auto mt-10 max-w-3xl">
         <div className="absolute left-0 top-3 h-[calc(100%-2.5rem)] w-px bg-ink-950/10 sm:left-1" />
 
         <div className="space-y-2">
@@ -79,7 +79,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <Reveal className="mx-auto mt-20 max-w-3xl text-center" index={1}>
+      <Reveal className="mx-auto mt-10 max-w-3xl text-center" index={1}>
         <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3 font-display text-sm font-medium text-ink-400">
           {skillGroups.map((g, i) => (
             <span key={g.category} className="flex items-center gap-3">

@@ -11,7 +11,7 @@ const ICONS = [Dna, HeartPulse, Brain, LineChart, Activity];
 
 export default function PharmaTech() {
   return (
-    <SectionWrapper id="pharma-tech" tint>
+    <SectionWrapper id="pharma-tech">
       <Reveal className="mx-auto max-w-3xl text-center">
         <p className="kicker text-vital-600">Future Vision</p>
         <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
@@ -21,7 +21,7 @@ export default function PharmaTech() {
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-600">{pharma.statement}</p>
       </Reveal>
 
-      <div className="relative mx-auto mt-24 grid max-w-5xl gap-y-14 sm:grid-cols-5 sm:gap-x-4">
+      <div className="relative mx-auto mt-12 grid max-w-5xl gap-y-14 sm:grid-cols-5 sm:gap-x-4">
         <div className="pointer-events-none absolute inset-x-0 top-7 hidden h-px overflow-hidden sm:block">
           <motion.div
             className="h-full bg-ink-950/15"
@@ -56,7 +56,7 @@ export default function PharmaTech() {
         })}
       </div>
 
-      <Reveal className="mx-auto mt-20 max-w-2xl text-center">
+      <Reveal className="mx-auto mt-10 max-w-2xl text-center">
         <p className="kicker !text-[10px] text-vital-600">{pharma.researchNote.org}</p>
         <p className="mt-3 text-base leading-relaxed text-ink-600">{pharma.researchNote.detail}</p>
       </Reveal>

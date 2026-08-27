@@ -68,7 +68,7 @@ export default function Certifications() {
   }
 
   return (
-    <SectionWrapper id="certifications" tint>
+    <SectionWrapper id="certifications">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <Reveal className="max-w-3xl">
           <p className="kicker">Learning Journey</p>
@@ -95,7 +95,7 @@ export default function Certifications() {
         </Reveal>
       </div>
 
-      <Reveal variant="blur" className="relative mt-14">
+      <Reveal variant="blur" className="relative mt-10">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-paper-200 to-transparent sm:w-24" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-paper-200 to-transparent sm:w-24" />
 
@@ -149,7 +149,7 @@ export default function Certifications() {
         </div>
       </Reveal>
 
-      <Reveal className="mx-auto mt-14 max-w-xl text-center">
+      <Reveal className="mx-auto mt-10 max-w-xl text-center">
         <p className="text-base leading-relaxed text-ink-500">
           Each certification sharpens the same instinct: owning the product, thinking like the business, and
           building like an engineer.

@@ -7,9 +7,7 @@ import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Startup from "@/components/Startup";
 import PharmaTech from "@/components/PharmaTech";
-import ResumeViewer from "@/components/ResumeViewer";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -24,10 +22,8 @@ export default function Home() {
         <Certifications />
         <Startup />
         <PharmaTech />
-        <ResumeViewer />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

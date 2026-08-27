@@ -14,14 +14,14 @@ export default function Experience() {
         </h2>
       </Reveal>
 
-      <div className="mt-24 space-y-24">
+      <div className="mt-12 space-y-12">
         {experience.map((exp, i) => {
           const approach = exp.responsibilities.slice(0, -1);
           const impact = exp.responsibilities[exp.responsibilities.length - 1];
           const isEven = i % 2 === 0;
 
           return (
-            <div key={exp.company + exp.period} className="border-t border-ink-950/10 pt-16 first:border-0 first:pt-0">
+            <div key={exp.company + exp.period} className="border-t border-ink-950/10 pt-10 first:border-0 first:pt-0">
               <div className={`grid gap-10 md:grid-cols-2 md:gap-16 ${isEven ? "" : "md:[direction:rtl]"}`}>
                 <Reveal variant={isEven ? "left" : "right"} className="md:[direction:ltr]">
                   <div className="flex flex-wrap items-center gap-2">

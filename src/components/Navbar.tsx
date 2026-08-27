@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import MagneticButton from "./MagneticButton";
+import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
   { href: "#about", label: "About" },
@@ -51,7 +52,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <MagneticButton strength={0.25}>
             <a href="#contact" className="btn-primary !px-5 !py-2.5 text-[13px]">
               Let&apos;s Talk
@@ -59,13 +61,16 @@ export default function Navbar() {
           </MagneticButton>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-ink-950/10 text-ink-950 lg:hidden"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <X size={17} /> : <Menu size={17} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            aria-label="Toggle menu"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-ink-950/10 text-ink-950"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={17} /> : <Menu size={17} />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

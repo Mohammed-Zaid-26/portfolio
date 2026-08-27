@@ -32,7 +32,7 @@ export default function About() {
         <p className="mt-6 text-lg leading-relaxed text-ink-600">{profile.summary}</p>
       </Reveal>
 
-      <div className="mt-24 grid gap-16 md:grid-cols-2 md:gap-20">
+      <div className="mt-12 grid gap-16 md:grid-cols-2 md:gap-20">
         <Reveal variant="left">
           <p className="kicker">Who I Am</p>
           <p className="mt-4 text-2xl font-display font-medium leading-snug text-ink-950">
@@ -64,7 +64,7 @@ export default function About() {
         </Reveal>
       </div>
 
-      <Reveal className="mt-28">
+      <Reveal className="mt-14">
         <p className="kicker">How I Think</p>
         <div className="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-4">
           {howithink.map((step, i) => (
