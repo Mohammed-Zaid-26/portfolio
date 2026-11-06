@@ -15,7 +15,8 @@
       "FRD Documentation",
       "RTM",
       "Use Case Development",
-      "UAT Support"
+      "KPI Definition",
+      "System Flow Diagrams & Process Maps"
     ]
   },
   {
@@ -35,6 +36,22 @@
     ]
   },
   {
+    "category": "Delivery & Ways of Working",
+    "color": "signal",
+    "description": "Running the sprint rhythm so requirements actually ship — as Scrum Master for DevOps, UI/UX and QA teams.",
+    "appliedIn": ["Advanced Millennium Technologies (AMT)"],
+    "skills": [
+      "Agile & Scrum",
+      "Scrum Ceremonies",
+      "Sprint Planning",
+      "Backlog Grooming",
+      "UAT Support",
+      "DevOps",
+      "SDLC",
+      "Cross-functional Collaboration"
+    ]
+  },
+  {
     "category": "Technology Understanding",
     "color": "electric",
     "description": "Enough engineering fluency to write requirements that are actually buildable.",
@@ -48,16 +65,25 @@
       "Next.js",
       "Python",
       "FastAPI",
+      "Plotly",
+      "RESTful APIs",
       "MySQL",
       "MongoDB",
       "PostgreSQL",
       "Redis",
+      "Supabase",
+      "Cloudflare R2",
+      "BullMQ",
       "Git",
       "GitHub",
       "VS Code",
       "Docker",
+      "Postman",
+      "Grafana",
       "JIRA",
-      "Confluence"
+      "Confluence",
+      "Visio",
+      "Linear"
     ]
   },
   {
@@ -71,8 +97,9 @@
       "Data Interpretation",
       "SQL",
       "Power BI",
-      "Excel Analytics",
-      "Data Visualization"
+      "Excel (Advanced)",
+      "Data Visualization",
+      "Business Intelligence"
     ]
   },
   {
@@ -85,7 +112,9 @@
       "Mortality Risk Prediction (ML)",
       "Clinical Dataset Research",
       "AI for Aging & Chronic Care",
-      "Cross-functional Research Collaboration"
+      "Cross-functional Research Collaboration",
+      "Healthcare IT",
+      "Literature Review"
     ]
   }
 ]

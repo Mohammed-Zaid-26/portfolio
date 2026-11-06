@@ -5,40 +5,48 @@
     "period": "Aug 2025 – Present",
     "location": "Bengaluru, India",
     "current": true,
-    "summary": "Core Business Analyst across multiple enterprise and product-focused initiatives at UIB — bridging clients, developers and internal stakeholders.",
+    "summary": "Core Business Analyst across SAGINT OS, UIB and ESCRA — also Scrum Master for the delivery teams and AI Tools Officer for the company.",
     "responsibilities": [
-      "Managed end-to-end requirement gathering, workflow definition, and stakeholder alignment for UIB.",
-      "Translated user feedback and business needs into clear, actionable product requirements for UI/UX enhancements.",
-      "Supported AI integration within the Unified Inbox product — use case definition, functional documentation, coordination with AI and engineering teams.",
-      "Acted as a bridge between clients, developers and internal stakeholders, ensuring requirement clarity, scope control and timely delivery."
+      "Business Analyst: Served as a core Business Analyst across SAGINT OS, UIB, and ESCRA, leading requirement gathering, workflow definition, user story creation, stakeholder coordination, and functional documentation across enterprise and SaaS initiatives.",
+      "Scrum Master: Facilitate daily scrum ceremonies for DevOps, UI/UX, QA, and active project teams, tracking progress, dependencies, blockers, and cross-functional coordination to support timely sprint delivery.",
+      "AI Tools Officer: Led an internal AI tools optimization initiative that, within 60 days, reduced AI tooling costs by 70% while increasing productivity/user adoption by 30% through usage analysis, tool rationalization, and improved access management."
     ],
     "projects": [
       {
-        "name": "Unified Inbox (SaaS Product — UAI)",
+        "name": "SAGINT OS — Tokenized Compliance & Supply Chain Traceability Platform",
+        "points": [
+          "Core BA for a confidential blockchain-enabled platform covering supply-chain traceability, tokenization, and compliance, owning requirements and workflow design end to end.",
+          "Supported alignment with U.S. DFARS requirements through compliance documentation, requirement traceability, and structured functional specifications.",
+          "Translated complex business needs into user stories, process flows, acceptance criteria, and enhancement proposals across product, engineering, QA, and stakeholder teams.",
+          "Drove release validation, E2E testing, and defect analysis across onboarding, feedstock, batch processing, vaulting, Proof of Reserve, DWR lifecycle, transfers, recycling, and marketplace workflows."
+        ]
+      },
+      {
+        "name": "Unified Inbox — UAI SaaS Product",
         "points": [
           "Gathered and documented business and functional requirements for enterprise clients.",
-          "Created user stories, workflows and feature specifications to support product enhancements.",
+          "Created user stories, workflows, and feature specifications to support product enhancements.",
           "Supported UI improvements and AI-driven features through structured documentation and stakeholder coordination."
         ]
       },
       {
-        "name": "ESCRA (Blockchain-based Platform)",
+        "name": "ESCRA — Blockchain-Based Platform",
         "points": [
           "Served as the primary liaison between clients and development teams.",
-          "Gathered, analyzed and framed functional and technical requirements for blockchain workflows.",
-          "Supported sprint planning, documentation and scope alignment in an Agile environment."
-        ]
-      },
-      {
-        "name": "SAGINT — Tokenized Compliance System for Rare Earth Mineral Verification (SaaS product — Sagint OS)",
-        "points": [
-          "Working on a highly confidential blockchain compliance project aligned with US government DFARS requirements.",
-          "Contributing to compliance-focused documentation and maintaining requirement traceability.",
-          "Supporting blockchain-based tokenization mechanisms within supply chain verification."
+          "Gathered and analyzed functional and technical requirements for blockchain workflows while supporting sprint planning, documentation, and scope alignment in an Agile environment."
         ]
       }
     ],
-    "tech": ["Requirements Engineering", "Agile/Scrum", "Blockchain", "AI Integration", "JIRA", "Confluence"]
+    "tech": [
+      "Requirements Engineering",
+      "Agile/Scrum",
+      "Scrum Master",
+      "Blockchain",
+      "AI Integration",
+      "E2E Testing",
+      "JIRA",
+      "Confluence"
+    ]
   },
   {
     "company": "Qedence",

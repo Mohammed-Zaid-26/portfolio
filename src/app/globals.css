@@ -19,6 +19,10 @@
   --color-ink-500: 113 118 128;
   --color-ink-400: 139 143 153;
 
+  /* Hero network colour */
+  --hero-net: 18 120 104;
+  --hero-net-node: 40 140 120;
+
   color-scheme: light;
 }
 
@@ -34,6 +38,9 @@
   --color-ink-600: 168 172 184;
   --color-ink-500: 140 145 158;
   --color-ink-400: 107 114 128;
+
+  --hero-net: 95 175 150;
+  --hero-net-node: 165 218 200;
 
   color-scheme: dark;
 }

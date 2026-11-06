@@ -2,6 +2,7 @@
 
 import SectionWrapper from "./SectionWrapper";
 import Reveal from "./Reveal";
+import ThinkingLoop from "./ThinkingLoop";
 import profile from "@/data/profile.json";
 import education from "@/data/education.json";
 import howithink from "@/data/howithink.json";
@@ -24,9 +25,9 @@ const BUILD_ITEMS = [
 export default function About() {
   return (
     <SectionWrapper id="about">
-      <Reveal className="max-w-3xl">
+      <Reveal>
         <p className="kicker">About</p>
-        <h2 className="section-heading mt-4">
+        <h2 className="section-heading mt-4 max-w-3xl">
           I turn ambiguity into <span className="text-gradient">structured, buildable</span> ideas.
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-ink-600">{profile.summary}</p>
@@ -66,16 +67,9 @@ export default function About() {
 
       <Reveal className="mt-14">
         <p className="kicker">How I Think</p>
-        <div className="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-4">
-          {howithink.map((step, i) => (
-            <span key={step.step} className="flex items-baseline gap-3">
-              <span className="font-display text-2xl font-semibold text-ink-950 sm:text-3xl">{step.step}</span>
-              {i < howithink.length - 1 && <span className="text-xl text-ink-400">→</span>}
-            </span>
-          ))}
-        </div>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-600">
-          The loop behind every engagement, from first conversation to shipped outcome — {howithink[0].detail.toLowerCase()}
+        <ThinkingLoop />
+        <p className="mt-6 text-base leading-relaxed text-ink-600">
+          The loop behind every engagement, from first conversation to shipped outcome. {howithink[0].detail}
         </p>
       </Reveal>
     </SectionWrapper>

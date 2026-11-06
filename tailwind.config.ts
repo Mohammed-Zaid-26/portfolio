@@ -44,6 +44,7 @@ const config: Config = {
         display: ["var(--font-display)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
+        "serif-display": ["var(--font-serif-display)", "serif"],
       },
       animation: {
         "drift-slow": "drift 11s ease-in-out infinite",

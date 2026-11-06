@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import profile from "@/data/profile.json";
 import Analytics from "@/components/Analytics";
@@ -20,6 +20,12 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   weight: ["400", "500"],
+});
+
+const serifDisplay = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-serif-display",
+  weight: "400",
 });
 
 const siteUrl = "https://mohammedzaid.dev";
@@ -69,7 +75,7 @@ const personLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} ${serifDisplay.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{

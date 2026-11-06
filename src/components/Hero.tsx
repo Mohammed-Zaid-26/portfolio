@@ -9,22 +9,8 @@ import certifications from "@/data/certifications.json";
 import projects from "@/data/projects.json";
 import howithink from "@/data/howithink.json";
 import MagneticButton from "./MagneticButton";
+import NetworkCanvas from "./NetworkCanvas";
 import { fadeUp, staggerContainer } from "@/lib/motion";
-
-const DOMAINS = [
-  {
-    label: "Enterprise SaaS",
-    items: ["Unified Inbox — AI-Augmented", "CodeHub — E-Learning"],
-  },
-  {
-    label: "Blockchain & Compliance",
-    items: ["ESCRA — Workflow Platform", "Sagint OS — DFARS Compliance"],
-  },
-  {
-    label: "Healthcare & Research",
-    items: ["Taipei ICHIT — Mortality Risk ML", "LifeSaver — Published, IRJMETS"],
-  },
-];
 
 const DOMAIN_TAGS = ["AI Integration", "Blockchain", "Healthcare Research", "Enterprise SaaS"];
 
@@ -34,34 +20,31 @@ const METRICS = [
   { value: `${certifications.length}`, label: "Certifications earned" },
 ];
 
-const BARS = [38, 62, 50, 78, 65, 90, 72, 84];
+const [FIRST_NAME, ...REST] = profile.name.split(" ");
+const LAST_NAME = REST.join(" ");
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
 
   const panelY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-  const panelRotate = useTransform(scrollYProgress, [0, 1], [0, 2.5]);
-  const layerBackY = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const layerFrontY = useTransform(scrollYProgress, [0, 1], [0, -25]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  // Fade the hero out on scroll only on wide screens; on phones the portrait sits
+  // below the fold and would already be half-faded by the time it is visible.
+  const [isWide, setIsWide] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = () => setIsWide(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  const fade = useTransform(scrollYProgress, [0, 0.8], isWide ? [1, 0] : [1, 1]);
 
   const [stepIndex, setStepIndex] = useState(0);
   useEffect(() => {
     const id = setInterval(() => setStepIndex((i) => (i + 1) % howithink.length), 1900);
     return () => clearInterval(id);
   }, []);
-
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  function handlePanelMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const relX = (e.clientX - rect.left) / rect.width - 0.5;
-    const relY = (e.clientY - rect.top) / rect.height - 0.5;
-    setTilt({ x: relX * 10, y: relY * -10 });
-  }
-  function resetTilt() {
-    setTilt({ x: 0, y: 0 });
-  }
 
   return (
     <section ref={sectionRef} id="hero" className="relative flex min-h-[100svh] items-center overflow-hidden bg-paper-50 pt-28 pb-16">
@@ -148,84 +131,66 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          style={{ y: panelY, rotateZ: panelRotate, transformStyle: "preserve-3d", perspective: 1200 }}
-          className="relative"
-        >
+        <motion.div style={{ y: panelY }} className="relative">
           <motion.div
-            style={{ y: layerBackY }}
-            className="absolute -right-6 -top-6 hidden h-40 w-40 rounded-2xl border border-signal-500/25 bg-signal-500/[0.06] sm:block"
-          />
-          <motion.div
-            style={{ y: layerFrontY }}
-            className="absolute -bottom-8 -left-6 hidden h-28 w-28 rounded-2xl border border-vital-500/25 bg-vital-500/[0.07] sm:block"
-          />
-
-          <motion.div
-            initial={{ opacity: 0, y: 24, rotateX: 8, rotateY: 0 }}
-            animate={{ opacity: 1, y: 0, rotateX: tilt.y, rotateY: tilt.x }}
-            transition={{
-              opacity: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-              y: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-              rotateX: { type: "spring", stiffness: 200, damping: 20, mass: 0.5 },
-              rotateY: { type: "spring", stiffness: 200, damping: 20, mass: 0.5 },
-            }}
-            onMouseMove={handlePanelMove}
-            onMouseLeave={resetTilt}
-            style={{ transformStyle: "preserve-3d" }}
-            className="device-panel animate-drift-slow relative p-5"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="relative isolate aspect-[4/5] [container-type:inline-size]"
           >
-            <div className="flex items-center gap-1.5 border-b border-ink-950/[0.06] pb-4">
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-950/10" />
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-950/10" />
-              <span className="h-2.5 w-2.5 rounded-full bg-ink-950/10" />
-              <span className="ml-3 font-mono text-[11px] text-ink-400">active-engagements.log</span>
-              <span className="ml-auto flex items-center gap-1.5 text-[10px] text-vital-600">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-vital-500" /> live
-              </span>
+            {/* Faint theme-coloured glow behind the mesh */}
+            <div className="pointer-events-none absolute -inset-[10%] bg-[radial-gradient(closest-side_at_50%_46%,rgb(var(--hero-net)/0.10),transparent_100%)] dark:bg-[radial-gradient(closest-side_at_50%_46%,rgb(var(--hero-net)/0.2),transparent_100%)]" />
+
+            {/* Dense node mesh, softly blurred, dissolving into the page at its edges */}
+            <NetworkCanvas className="absolute -inset-[8%] h-[116%] w-[116%] blur-[1.2px] [mask-image:radial-gradient(closest-side_at_50%_46%,black_62%,transparent_100%)]" />
+
+            {/* Portrait: smaller and dimmed so it sits behind the name, faded on all edges */}
+            <div className="absolute left-[10%] top-[5%] w-[80%] [mask-image:linear-gradient(to_right,transparent_0%,black_20%,black_80%,transparent_100%)]">
+              <motion.img
+                src="/images/portrait.webp"
+                alt={`Portrait of ${profile.name}`}
+                width={1000}
+                height={1000}
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className="w-full select-none [mask-image:linear-gradient(to_bottom,black_45%,transparent_92%)] opacity-90 saturate-[0.6] dark:opacity-100 dark:brightness-[0.62] dark:saturate-[0.5]"
+                draggable={false}
+              />
             </div>
 
-            <div className="mt-5 grid grid-cols-3 gap-3">
-              {DOMAINS.map((col, colI) => (
-                <div key={col.label}>
-                  <p className="kicker !text-[10px] !tracking-[0.16em] text-ink-400">{col.label}</p>
-                  <div className="mt-2.5 space-y-2">
-                    {col.items.map((item, i) => (
-                      <motion.div
-                        key={item}
-                        initial={{ opacity: 0, x: -8 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.5 + colI * 0.1 + i * 0.08 }}
-                        className="rounded-lg border border-ink-950/[0.06] bg-paper-100 px-2.5 py-2.5"
-                      >
-                        <p className="text-[11px] font-medium leading-snug text-ink-800">{item}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-5 border-t border-ink-950/[0.06] pt-4">
-              <p className="kicker !text-[10px] !tracking-[0.16em] text-ink-400">Delivery Rhythm</p>
-              <div className="mt-3 flex items-end gap-1.5">
-                {BARS.map((h, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ height: 0 }}
-                    animate={{ height: `${h * 0.5}px` }}
-                    transition={{ duration: 0.6, delay: 0.8 + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex-1 rounded-t bg-gradient-to-t from-electric-500/50 to-vital-400/60"
-                  />
-                ))}
-              </div>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {["BRD", "FRD", "RTM", "UAT", "Agile"].map((t) => (
-                  <span key={t} className="tag">
-                    {t}
-                  </span>
-                ))}
-              </div>
+            <div className="absolute inset-x-0 top-[40%] flex flex-col items-center text-center [text-shadow:0_0_2cqw_rgb(var(--color-paper-50)),0_0_7cqw_rgb(var(--color-paper-50))]">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="font-mono text-[2.3cqw] uppercase tracking-[0.3em] text-ink-700"
+              >
+                {profile.titles[0]} &amp; Product Builder
+              </motion.p>
+              <h2
+                aria-label={profile.name}
+                style={{ fontFamily: "var(--font-serif-display), serif" }}
+                className="mt-[2cqw] uppercase leading-[0.9] tracking-[-0.01em]"
+              >
+                <motion.span
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  className="block text-[20.5cqw] text-ink-950"
+                >
+                  {FIRST_NAME}
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative inline-block text-[20.5cqw]"
+                >
+                  <span className="text-ink-950/55">{LAST_NAME}</span>
+                  <span className="absolute -right-[4cqw] bottom-[4.5cqw] h-[3cqw] w-[3cqw] rounded-full bg-vital-500 shadow-[0_0_18px_rgba(15,157,100,0.7)]" />
+                </motion.span>
+              </h2>
             </div>
           </motion.div>
         </motion.div>

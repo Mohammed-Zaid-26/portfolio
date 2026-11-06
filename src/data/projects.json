@@ -29,16 +29,16 @@
   },
   {
     "id": "sagint-os",
-    "name": "SAGINT — Tokenized Compliance System",
+    "name": "SAGINT OS — Tokenized Compliance & Supply Chain Traceability",
     "category": "Government Compliance / Blockchain",
-    "summary": "Supported a DFARS-aligned, blockchain-based compliance system for rare earth supply chain traceability — a nationally significant, high-confidentiality engagement.",
+    "summary": "Core BA on a confidential, DFARS-aligned blockchain platform for supply-chain traceability, tokenization and compliance — owning requirements and workflow design end to end.",
     "problem": "Rare earth mineral supply chains needed a compliance system aligned to US government DFARS requirements — a highly confidential, high-stakes traceability problem.",
     "research": "Analyzed DFARS compliance requirements and existing supply-chain verification gaps.",
-    "solution": "Contributed to compliance-focused documentation and blockchain-based tokenization mechanisms for supply chain verification.",
-    "execution": "Maintained requirement traceability across a confidential, government-aligned workstream.",
-    "contribution": "Compliance documentation and requirement traceability support on Sagint OS.",
+    "solution": "Translated complex business needs into user stories, process flows, acceptance criteria and enhancement proposals; supported DFARS alignment through compliance documentation, requirement traceability and structured functional specifications.",
+    "execution": "Drove release validation, E2E testing and defect analysis across onboarding, feedstock, batch processing, vaulting, Proof of Reserve, DWR lifecycle, transfers, recycling and marketplace workflows.",
+    "contribution": "Core Business Analyst owning requirements and workflow design end to end, working across product, engineering, QA and stakeholder teams.",
     "impact": "Supporting a nationally significant supply-chain verification initiative with audit-ready traceability.",
-    "tech": ["Blockchain", "Compliance (DFARS)", "Tokenization", "Supply Chain"],
+    "tech": ["Blockchain", "Compliance (DFARS)", "Tokenization", "Supply Chain", "E2E Testing"],
     "confidential": true
   },
   {

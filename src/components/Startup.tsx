@@ -33,7 +33,7 @@ export default function Startup() {
       <div className="ambient-wash" />
 
       <div className="relative">
-        <Reveal className="max-w-xl">
+        <Reveal className="max-w-3xl">
           <p className="kicker">Building Beyond Roles</p>
           <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink-950 sm:text-5xl">
             Introducing
@@ -41,7 +41,7 @@ export default function Startup() {
             <span className="text-gradient">{startup.name}</span>
           </h2>
           <span className="mt-5 block h-1 w-14 rounded-full bg-gradient-to-r from-electric-500 to-vital-500" />
-          <p className="mt-6 max-w-sm text-base leading-relaxed text-ink-600">{startup.pitch}</p>
+          <p className="mt-6 text-base leading-relaxed text-ink-600">{startup.pitch}</p>
           <p className="mt-5 flex items-center gap-2 text-sm text-ink-400">
             <Briefcase size={14} />
             {startup.role} | Since {startup.since}
