@@ -117,7 +117,7 @@ function RoleCard({
         <p className="font-mono text-xs text-ink-400">0{index + 1}</p>
         {exp.current && <CurrentBadge />}
       </div>
-      <h3 className="mt-3 font-display text-xl font-semibold leading-snug text-ink-950">{exp.company}</h3>
+      <h3 className="mt-3 font-display text-xl font-medium leading-snug text-ink-950">{exp.company}</h3>
       <p className="mt-1.5 text-sm font-medium text-electric-600">{exp.role}</p>
       <p className="mt-1 text-xs text-ink-400">
         {exp.period} · {exp.location}
@@ -332,7 +332,7 @@ function FullList() {
                 <p className="font-mono text-xs text-ink-400">0{i + 1}</p>
                 {exp.current && <CurrentBadge />}
               </div>
-              <h3 className="mt-3 font-display text-3xl font-semibold text-ink-950 sm:text-4xl">{exp.company}</h3>
+              <h3 className="mt-3 font-display text-3xl font-medium text-ink-950 sm:text-4xl">{exp.company}</h3>
               <p className="mt-2 text-base font-medium text-electric-600">{exp.role}</p>
               <p className="mt-1 text-sm text-ink-400">
                 {exp.period} · {exp.location}
@@ -358,7 +358,7 @@ export default function Experience() {
         <Reveal className="max-w-3xl">
           <p className="kicker">Professional Journey</p>
           <h2 className="section-heading mt-4">
-            From requirements desk to <span className="text-gradient">founder&apos;s seat</span>.
+            From requirements desk to <span className="text-highlight">founder&apos;s seat</span>.
           </h2>
         </Reveal>
         <button

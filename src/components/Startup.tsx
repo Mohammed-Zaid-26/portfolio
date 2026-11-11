@@ -35,10 +35,10 @@ export default function Startup() {
       <div className="relative">
         <Reveal className="max-w-3xl">
           <p className="kicker">Building Beyond Roles</p>
-          <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink-950 sm:text-5xl">
+          <h2 className="mt-4 font-display text-4xl font-medium leading-[1.05] tracking-tight text-ink-950 sm:text-5xl">
             Introducing
             <br />
-            <span className="text-gradient">{startup.name}</span>
+            <span className="text-highlight">{startup.name}</span>
           </h2>
           <span className="mt-5 block h-1 w-14 rounded-full bg-gradient-to-r from-electric-500 to-vital-500" />
           <p className="mt-6 text-base leading-relaxed text-ink-600">{startup.pitch}</p>
@@ -61,7 +61,7 @@ export default function Startup() {
                     </span>
                     <span className={`font-mono text-xs font-bold tracking-wider ${n.accent}`}>{n.number}</span>
                   </div>
-                  <p className="mt-4 font-display text-lg font-bold text-ink-950">{n.stage}</p>
+                  <p className="mt-4 font-display text-lg font-medium text-ink-950">{n.stage}</p>
                   <p className="mt-2 text-sm leading-relaxed text-ink-600">{p.description}</p>
                 </div>
               </Reveal>
@@ -88,7 +88,7 @@ export default function Startup() {
               <Send size={18} />
             </span>
             <div>
-              <p className="font-display text-base font-bold text-ink-950">Let&apos;s Build Something Meaningful</p>
+              <p className="font-display text-base font-medium text-ink-950">Let&apos;s Build Something Meaningful</p>
               <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{"I'm always excited to discuss ideas that create real impact."}</p>
               <MagneticButton className="mt-4 inline-block">
                 <a href="#contact" className="btn-primary">

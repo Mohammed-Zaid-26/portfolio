@@ -35,7 +35,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5 md:px-10">
-        <a href="#hero" className="font-display text-base font-semibold tracking-tight text-ink-950">
+        <a href="#hero" className="font-display text-base font-medium tracking-tight text-ink-950">
           Mohammed Zaid
         </a>
 

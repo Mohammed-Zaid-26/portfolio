@@ -21,11 +21,11 @@ export default function Skills() {
       <Reveal className="max-w-3xl">
         <p className="kicker">Capability Landscape</p>
         <h2 className="section-heading mt-4">
-          A <span className="text-gradient">connected</span> way of thinking, not a checklist.
+          A <span className="text-highlight">connected</span> way of thinking, not a checklist.
         </h2>
       </Reveal>
 
-      <div className="relative mx-auto mt-10 max-w-3xl">
+      <div className="relative mt-10">
         <div className="absolute left-0 top-3 h-[calc(100%-2.5rem)] w-px bg-ink-950/10 sm:left-1" />
 
         <div className="space-y-2">
@@ -38,7 +38,7 @@ export default function Skills() {
                 <button onClick={() => setOpen(isOpen ? null : i)} className="flex w-full items-baseline justify-between gap-4 py-4 text-left">
                   <span className="flex items-baseline gap-4">
                     <span className="font-mono text-xs text-ink-400">0{i + 1}</span>
-                    <span className={`font-display text-3xl font-semibold sm:text-4xl ${isOpen ? color : "text-ink-950"}`}>
+                    <span className={`font-display text-3xl font-medium sm:text-4xl ${isOpen ? color : "text-ink-950"}`}>
                       {group.category}
                     </span>
                   </span>
@@ -55,7 +55,7 @@ export default function Skills() {
                       className="overflow-hidden"
                     >
                       <div className="pb-8 pt-1">
-                        <p className="max-w-lg text-sm leading-relaxed text-ink-600">{group.description}</p>
+                        <p className="text-sm leading-relaxed text-ink-600">{group.description}</p>
                         <div className="mt-5 flex flex-wrap gap-2">
                           {group.skills.map((s) => (
                             <span key={s} className="tag">
@@ -79,7 +79,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <Reveal className="mx-auto mt-10 max-w-3xl text-center" index={1}>
+      <Reveal className="mt-10 text-center" index={1}>
         <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-3 font-display text-sm font-medium text-ink-400">
           {skillGroups.map((g, i) => (
             <span key={g.category} className="flex items-center gap-3">

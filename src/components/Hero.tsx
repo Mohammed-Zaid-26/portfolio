@@ -85,10 +85,10 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             custom={2}
-            className="mt-6 font-display text-4xl font-semibold leading-[1.06] tracking-tight text-ink-950 sm:text-5xl lg:text-[3.75rem] xl:text-[4rem]"
+            className="mt-6 font-display text-4xl font-medium leading-[1.06] tracking-tight text-ink-950 sm:text-5xl lg:text-[3.75rem] xl:text-[4rem]"
           >
-            I turn <span className="text-gradient">business ambiguity</span> into systems that{" "}
-            <span className="text-vital-600">ship</span>.
+            I turn <span className="text-highlight">business ambiguity</span> into systems that{" "}
+            ship.
           </motion.h1>
 
           <motion.p variants={fadeUp} custom={3} className="mt-7 max-w-lg text-base leading-relaxed text-ink-600">
@@ -124,7 +124,7 @@ export default function Hero() {
           <motion.div variants={fadeUp} custom={6} className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-ink-950/10 pt-7">
             {METRICS.map((m) => (
               <div key={m.label}>
-                <p className="font-display text-2xl font-semibold text-ink-950">{m.value}</p>
+                <p className="font-display text-2xl font-medium text-ink-950">{m.value}</p>
                 <p className="mt-1 text-xs leading-snug text-ink-400">{m.label}</p>
               </div>
             ))}
@@ -170,14 +170,14 @@ export default function Hero() {
               </motion.p>
               <h2
                 aria-label={profile.name}
-                style={{ fontFamily: "var(--font-serif-display), serif" }}
+                style={{ fontFamily: "var(--font-display), serif" }}
                 className="mt-[2cqw] uppercase leading-[0.9] tracking-[-0.01em]"
               >
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="block text-[20.5cqw] text-ink-950"
+                  className="block text-[17.5cqw] text-ink-950"
                 >
                   {FIRST_NAME}
                 </motion.span>
@@ -185,10 +185,10 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative inline-block text-[20.5cqw]"
+                  className="relative inline-block text-[17.5cqw]"
                 >
                   <span className="text-ink-950/55">{LAST_NAME}</span>
-                  <span className="absolute -right-[4cqw] bottom-[4.5cqw] h-[3cqw] w-[3cqw] rounded-full bg-vital-500 shadow-[0_0_18px_rgba(15,157,100,0.7)]" />
+                  <span className="absolute -right-[4cqw] bottom-[4.5cqw] h-[3cqw] w-[3cqw] rounded-full bg-vital-500 shadow-[0_0_18px_rgb(var(--color-vital-500)/0.7)]" />
                 </motion.span>
               </h2>
             </div>

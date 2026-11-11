@@ -14,7 +14,7 @@ export default function PharmaTech() {
     <SectionWrapper id="pharma-tech">
       <Reveal className="mx-auto max-w-3xl text-center">
         <p className="kicker text-vital-600">Future Vision</p>
-        <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
+        <h2 className="mt-4 font-display text-4xl font-medium leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
           {pharma.title}
         </h2>
         <p className="mt-6 text-lg font-medium text-ink-800">{pharma.positioning}</p>
@@ -44,7 +44,7 @@ export default function PharmaTech() {
           const Icon = ICONS[i % ICONS.length];
           return (
             <Reveal key={pillar.label} index={i} variant="scale" className="flex flex-col items-center gap-3 text-center">
-              <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-vital-500/30 bg-paper-50 text-vital-600 shadow-[0_10px_30px_-12px_rgba(15,157,100,0.35)]">
+              <span className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border border-vital-500/30 bg-paper-50 text-vital-600 shadow-[0_10px_30px_-12px_rgb(var(--color-vital-500)/0.35)]">
                 <Icon size={20} />
               </span>
               <div>

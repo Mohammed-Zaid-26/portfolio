@@ -3,44 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
 
-  --color-paper-50: 253 252 250;
-  --color-paper-100: 250 248 244;
-  --color-paper-200: 243 241 234;
-  --color-paper-300: 233 230 220;
+  /* Accent palette (RGB triplets) — change these to re-theme the site.
+     Names are historical: "electric" = primary accent (deep sage green),
+     "vital" = secondary accent (muted gold), "signal"/"deepblue" follow the primary. */
+  --color-deepblue-600: 26 98 70;
+  --color-deepblue-700: 20 78 56;
+  --color-electric-400: 76 160 124;
+  --color-electric-500: 36 122 88;
+  --color-electric-600: 26 98 70;
+  --color-vital-400: 176 142 70;
+  --color-vital-500: 150 116 46;
+  --color-vital-600: 124 94 34;
+  --color-signal-400: 76 160 124;
+  --color-signal-500: 36 122 88;
+  --color-signal-600: 26 98 70;
 
-  --color-ink-950: 20 22 26;
-  --color-ink-800: 43 46 53;
-  --color-ink-700: 61 65 74;
-  --color-ink-600: 88 93 104;
-  --color-ink-500: 113 118 128;
-  --color-ink-400: 139 143 153;
+  /* Theme: Ink & Sage — cool off-white, near-black ink */
+  --color-paper-50: 250 250 247;
+  --color-paper-100: 245 246 241;
+  --color-paper-200: 237 239 232;
+  --color-paper-300: 226 229 220;
+
+  --color-ink-950: 20 26 23;
+  --color-ink-800: 39 47 43;
+  --color-ink-700: 57 66 61;
+  --color-ink-600: 80 90 85;
+  --color-ink-500: 106 116 111;
+  --color-ink-400: 134 143 138;
 
   /* Hero network colour */
-  --hero-net: 18 120 104;
-  --hero-net-node: 40 140 120;
+  --hero-net: 36 122 88;
+  --hero-net-node: 56 140 104;
 
   color-scheme: light;
 }
 
 .dark {
-  --color-paper-50: 10 11 13;
-  --color-paper-100: 16 17 20;
-  --color-paper-200: 24 26 30;
-  --color-paper-300: 34 37 43;
+  --color-paper-50: 12 14 13;
+  --color-paper-100: 17 20 18;
+  --color-paper-200: 24 28 26;
+  --color-paper-300: 34 39 36;
 
-  --color-ink-950: 245 246 247;
-  --color-ink-800: 216 218 224;
-  --color-ink-700: 189 192 200;
-  --color-ink-600: 168 172 184;
-  --color-ink-500: 140 145 158;
-  --color-ink-400: 107 114 128;
+  --color-ink-950: 238 242 239;
+  --color-ink-800: 212 218 214;
+  --color-ink-700: 186 194 189;
+  --color-ink-600: 164 173 168;
+  --color-ink-500: 136 146 141;
+  --color-ink-400: 106 116 111;
 
-  --hero-net: 95 175 150;
-  --hero-net-node: 165 218 200;
+  /* Lighter accents so green/gold text stays readable on the dark background */
+  --color-deepblue-600: 110 190 150;
+  --color-deepblue-700: 84 170 128;
+  --color-electric-400: 140 208 172;
+  --color-electric-500: 110 190 150;
+  --color-electric-600: 96 178 138;
+  --color-vital-400: 222 190 120;
+  --color-vital-500: 206 168 92;
+  --color-vital-600: 196 156 78;
+  --color-signal-400: 140 208 172;
+  --color-signal-500: 110 190 150;
+  --color-signal-600: 96 178 138;
+
+  --hero-net: 110 180 145;
+  --hero-net-node: 165 215 190;
 
   color-scheme: dark;
 }
@@ -62,7 +90,7 @@ body {
 }
 
 ::selection {
-  background: rgba(49, 99, 221, 0.18);
+  background: rgb(var(--color-electric-500) / 0.2);
   color: rgb(var(--color-ink-950));
 }
 
@@ -97,11 +125,12 @@ body {
   }
 
   .section-heading {
-    @apply font-display text-3xl font-semibold leading-[1.1] tracking-tight text-ink-950 sm:text-4xl md:text-5xl;
+    @apply font-display text-3xl font-medium leading-[1.1] tracking-tight text-ink-950 sm:text-4xl md:text-5xl;
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-deepblue-600 via-electric-500 to-vital-500;
+  /* Single solid accent for highlighted words in headings (was a blue→green gradient) */
+  .text-highlight {
+    @apply text-electric-600 dark:text-electric-400;
   }
 
   .btn-primary {
@@ -154,14 +183,14 @@ body {
   right: -6%;
   width: 42%;
   height: 42%;
-  background: radial-gradient(circle, #cfe0ff, transparent 70%);
+  background: radial-gradient(circle, #dbe8df, transparent 70%);
 }
 .ambient-wash::after {
   bottom: -16%;
   left: -8%;
   width: 46%;
   height: 46%;
-  background: radial-gradient(circle, #cdf3e3, transparent 70%);
+  background: radial-gradient(circle, #efe7d2, transparent 70%);
 }
 
 .dark .ambient-wash::before,

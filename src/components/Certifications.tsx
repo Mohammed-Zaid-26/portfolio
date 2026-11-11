@@ -73,7 +73,7 @@ export default function Certifications() {
         <Reveal className="max-w-3xl">
           <p className="kicker">Learning Journey</p>
           <h2 className="section-heading mt-4">
-            Continuously certified, <span className="text-gradient">continuously evolving</span>.
+            Continuously certified, <span className="text-highlight">continuously evolving</span>.
           </h2>
         </Reveal>
 
@@ -120,7 +120,7 @@ export default function Certifications() {
                   <Award size={20} />
                 </span>
 
-                <p className="mt-5 font-display text-lg font-semibold leading-snug text-ink-950">{cert.name}</p>
+                <p className="mt-5 font-display text-lg font-medium leading-snug text-ink-950">{cert.name}</p>
                 <p className="mt-1.5 text-sm text-ink-500">{cert.org}</p>
 
                 <div className="mt-4 max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-out group-hover:max-h-40 group-hover:opacity-100">

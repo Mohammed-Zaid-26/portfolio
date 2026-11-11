@@ -86,7 +86,7 @@ export default function Contact() {
           <Reveal variant="left">
             <p className="kicker">Get in touch</p>
             <h2 className="section-heading mt-4">
-              Have an idea <span className="text-gradient">worth building?</span>
+              Have an idea <span className="text-highlight">worth building?</span>
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-600">
               I am always interested in discussions around innovative products, healthcare technology, startups and

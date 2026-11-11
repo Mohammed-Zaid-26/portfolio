@@ -41,14 +41,14 @@ export default function ThinkingLoop() {
             transition={reduce ? { duration: 0 } : { duration: 0.5, delay: i * 0.12, ease: EASE }}
             className="flex items-baseline gap-3"
           >
-            <span className="relative font-display text-2xl font-semibold sm:text-3xl">
+            <span className="relative font-display text-2xl font-medium sm:text-3xl">
               {/* Plain word, crossfaded with a gradient copy when active */}
               <span className={`text-ink-950 transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`}>
                 {step.step}
               </span>
               <span
                 aria-hidden="true"
-                className={`text-gradient absolute inset-0 transition-opacity duration-500 ${
+                className={`text-highlight absolute inset-0 transition-opacity duration-500 ${
                   isActive ? "opacity-100" : "opacity-0"
                 }`}
               >

@@ -28,7 +28,7 @@ export default function About() {
       <Reveal>
         <p className="kicker">About</p>
         <h2 className="section-heading mt-4 max-w-3xl">
-          I turn ambiguity into <span className="text-gradient">structured, buildable</span> ideas.
+          I turn ambiguity into <span className="text-highlight">structured, buildable</span> ideas.
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-ink-600">{profile.summary}</p>
       </Reveal>

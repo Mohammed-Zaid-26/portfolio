@@ -41,7 +41,7 @@ export default function Projects() {
       <Reveal className="max-w-3xl">
         <p className="kicker">Product Case Studies</p>
         <h2 className="section-heading mt-4">
-          Every project, a <span className="text-gradient">story</span> worth telling.
+          Every project, a <span className="text-highlight">story</span> worth telling.
         </h2>
         <p className="mt-4 text-sm text-ink-500">Brief by design — several engagements sit under active NDAs.</p>
       </Reveal>
@@ -121,7 +121,7 @@ export default function Projects() {
                   )}
                 </div>
 
-                <h3 className="mt-4 font-display text-2xl font-semibold text-ink-950 sm:text-3xl">{project.name}</h3>
+                <h3 className="mt-4 font-display text-2xl font-medium text-ink-950 sm:text-3xl">{project.name}</h3>
 
                 <p className="mt-4 text-base leading-relaxed text-ink-600">{project.summary}</p>
 
