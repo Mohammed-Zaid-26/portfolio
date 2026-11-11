@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import profile from "@/data/profile.json";
-import experience from "@/data/experience.json";
+import { SHOW_QEDENCE, visibleExperience as experience, visibleTitles } from "@/lib/visibility";
 import certifications from "@/data/certifications.json";
 import projects from "@/data/projects.json";
 import howithink from "@/data/howithink.json";
@@ -79,7 +79,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p variants={fadeUp} custom={1} className="kicker mt-4">
-            {profile.titles.join(" · ")} · {profile.tagline}
+            {visibleTitles.join(" · ")} · {profile.tagline}
           </motion.p>
 
           <motion.h1
@@ -93,8 +93,10 @@ export default function Hero() {
 
           <motion.p variants={fadeUp} custom={3} className="mt-7 max-w-lg text-base leading-relaxed text-ink-600">
             I&apos;m the Business Analyst behind an AI-augmented enterprise inbox and a DFARS-aligned
-            blockchain compliance platform at AMT. I bring a background in healthcare AI research, and I&apos;m
-            co-founding a startup, Qedence, alongside it.
+            blockchain compliance platform at AMT.{" "}
+            {SHOW_QEDENCE
+              ? "I bring a background in healthcare AI research, and I’m co-founding a startup, Qedence, alongside it."
+              : "I bring a background in healthcare AI research."}
           </motion.p>
 
           <motion.div variants={fadeUp} custom={4} className="mt-5 flex flex-wrap gap-2">

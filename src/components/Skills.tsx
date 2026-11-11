@@ -6,6 +6,7 @@ import { Plus } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 import Reveal from "./Reveal";
 import skillGroups from "@/data/skills.json";
+import { withoutQedence } from "@/lib/visibility";
 
 const COLOR: Record<string, string> = {
   electric: "text-electric-600",
@@ -65,7 +66,7 @@ export default function Skills() {
                         </div>
                         <div className="mt-5">
                           <p className="kicker !text-[10px]">Applied in</p>
-                          <p className="mt-2 text-sm text-ink-600">{group.appliedIn.join(" · ")}</p>
+                          <p className="mt-2 text-sm text-ink-600">{withoutQedence(group.appliedIn).join(" · ")}</p>
                         </div>
                       </div>
                     </motion.div>

@@ -6,6 +6,7 @@ import Reveal from "./Reveal";
 import MagneticButton from "./MagneticButton";
 import profile from "@/data/profile.json";
 import { trackEvent } from "@/lib/analytics";
+import { SHOW_QEDENCE } from "@/lib/visibility";
 
 // Digits only with country code, e.g. "916364444851"
 const phoneDigits = profile.phone.replace(/\D/g, "");
@@ -89,8 +90,8 @@ export default function Contact() {
               Have an idea <span className="text-highlight">worth building?</span>
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-600">
-              I am always interested in discussions around innovative products, healthcare technology, startups and
-              digital transformation. Reach out directly. I read every message.
+              I am always interested in discussions around innovative products, healthcare technology,{" "}
+              {SHOW_QEDENCE ? "startups and " : "and "}digital transformation. Reach out directly. I read every message.
             </p>
 
             <div className="mt-8 flex flex-col gap-3">

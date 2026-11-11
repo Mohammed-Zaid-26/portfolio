@@ -3,6 +3,7 @@ import { Source_Serif_4, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import profile from "@/data/profile.json";
 import Analytics from "@/components/Analytics";
+import { SHOW_QEDENCE, visibleTitles } from "@/lib/visibility";
 
 // Headings and the hero name
 const display = Source_Serif_4({
@@ -18,7 +19,7 @@ const body = Source_Sans_3({
 });
 
 const siteUrl = "https://zaid26-portfolio.vercel.app";
-const title = `${profile.name} | ${profile.titles.join(" | ")}`;
+const title = `${profile.name} | ${visibleTitles.join(" | ")}`;
 const description = profile.positioning;
 
 export const metadata: Metadata = {
@@ -30,8 +31,7 @@ export const metadata: Metadata = {
     "Business Analyst",
     "Product Manager",
     "Product Owner",
-    "Entrepreneur",
-    "Qedence",
+    ...(SHOW_QEDENCE ? ["Entrepreneur", "Qedence"] : []),
     "Digital Transformation",
     "Healthcare Technology",
   ],
@@ -56,7 +56,7 @@ const personLd = {
   "@type": "Person",
   name: profile.name,
   email: profile.email,
-  jobTitle: profile.titles.join(" | "),
+  jobTitle: visibleTitles.join(" | "),
   address: profile.location,
   sameAs: [profile.linkedin],
   description: profile.positioning,

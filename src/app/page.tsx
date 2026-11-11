@@ -8,6 +8,7 @@ import Certifications from "@/components/Certifications";
 import Startup from "@/components/Startup";
 import PharmaTech from "@/components/PharmaTech";
 import Contact from "@/components/Contact";
+import { SHOW_QEDENCE } from "@/lib/visibility";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
         <Experience />
         <Projects />
         <Certifications />
-        <Startup />
+        {/* Qedence section stays in the code; hidden while SHOW_QEDENCE is false */}
+        {SHOW_QEDENCE && <Startup />}
         <PharmaTech />
         <Contact />
       </main>

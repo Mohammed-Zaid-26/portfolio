@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 import ThemeToggle from "./ThemeToggle";
+import { SHOW_QEDENCE } from "@/lib/visibility";
 
-const LINKS = [
+const ALL_LINKS = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Journey" },
   { href: "#skills", label: "Capability" },
@@ -16,6 +17,8 @@ const LINKS = [
   { href: "#pharma-tech", label: "Vision" },
   { href: "#contact", label: "Contact" },
 ];
+
+const LINKS = SHOW_QEDENCE ? ALL_LINKS : ALL_LINKS.filter((l) => l.href !== "#qedence");
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

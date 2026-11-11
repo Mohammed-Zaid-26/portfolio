@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import SectionWrapper from "./SectionWrapper";
 import Reveal from "./Reveal";
-import experience from "@/data/experience.json";
+import { SHOW_QEDENCE, visibleExperience as experience } from "@/lib/visibility";
 
 type Exp = (typeof experience)[number];
 
@@ -358,7 +358,8 @@ export default function Experience() {
         <Reveal className="max-w-3xl">
           <p className="kicker">Professional Journey</p>
           <h2 className="section-heading mt-4">
-            From requirements desk to <span className="text-highlight">founder&apos;s seat</span>.
+            From requirements desk to{" "}
+            <span className="text-highlight">{SHOW_QEDENCE ? "founder’s seat" : "delivery"}</span>.
           </h2>
         </Reveal>
         <button
