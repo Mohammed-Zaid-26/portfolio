@@ -17,7 +17,7 @@ const body = Source_Sans_3({
   variable: "--font-body",
 });
 
-const siteUrl = "https://mohammedzaid.dev";
+const siteUrl = "https://zaid26-portfolio.vercel.app";
 const title = `${profile.name} | ${profile.titles.join(" | ")}`;
 const description = profile.positioning;
 

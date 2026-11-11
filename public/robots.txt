@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mohammedzaid.dev/sitemap.xml
+Sitemap: https://zaid26-portfolio.vercel.app/sitemap.xml
