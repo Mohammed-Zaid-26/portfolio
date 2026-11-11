@@ -1,16 +1,17 @@
 # Mohammed Zaid — Portfolio
 
-Premium, dynamic personal portfolio built with Next.js 14 (App Router), Tailwind CSS,
-Framer Motion and a lightweight Three.js particle background. Frontend-only — no
-database, no traditional backend. The single serverless piece is the contact form,
-which posts to a Next.js API route that relays messages to Telegram.
+Personal portfolio built with Next.js 14 (App Router), Tailwind CSS and Framer Motion.
+Fully static: no database, no backend, no API routes. The contact form hands the
+visitor's message to WhatsApp (with an email fallback), so there is nothing to host
+or configure beyond the site itself.
 
 ## Stack
 
 - **Next.js 14** (App Router, TypeScript)
 - **Tailwind CSS** for styling
 - **Framer Motion** for section/scroll animations and micro-interactions
-- **@react-three/fiber + three.js** for the hero's animated particle network
+- **HTML canvas** for the hero's animated node-mesh background (no 3D library)
+- **Fonts:** Source Serif 4 (headings) + Source Sans 3 (body), via `next/font`
 - **lucide-react** for icons
 - All content lives in `src/data/*.json` — nothing about you is hardcoded in components
 
@@ -22,7 +23,7 @@ src/
     layout.tsx        — fonts, metadata, JSON-LD, analytics
     page.tsx           — assembles all sections
     sitemap.ts
-    api/contact/route.ts — Telegram relay (edge function)
+    globals.css        — theme colours (CSS variables) for light and dark mode
   components/           — one component per section
   data/                 — JSON content (edit these, not the components)
   lib/                  — motion variants, analytics helper
@@ -58,37 +59,21 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Telegram contact form setup
+## Contact form (WhatsApp)
 
-The contact form has no database — every submission is relayed straight to your
-Telegram via the Bot API, from the `/api/contact` edge function.
+The contact form has no backend. When a visitor submits it, the browser:
 
-1. Message **@BotFather** on Telegram → `/newbot` → follow the prompts. Copy the bot
-   token it gives you.
-2. Send your new bot any message (e.g. "hi"), then visit, in a browser:
-   `https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates`
-   and copy the numeric `"chat":{"id": ...}` value — that's your chat ID.
-3. Copy `.env.local.example` to `.env.local` and fill in:
-   ```
-   TELEGRAM_BOT_TOKEN=your-token
-   TELEGRAM_CHAT_ID=your-chat-id
-   ```
-4. Restart the dev server. Submitting the contact form now sends you a Telegram
-   message formatted as:
-   ```
-   New Portfolio Contact
-   Name: ...
-   Email: ...
-   Company: ...
-   LinkedIn: ...
-   Interest: ...
-   Message: ...
-   ```
-5. Reply to the person by email — the form is a one-way notification, not a chat
-   thread.
+1. Validates the fields (name and message required, plus an email or a phone number).
+2. Builds a plain-text message and opens `https://wa.me/<number>?text=<message>` in a
+   new tab, so WhatsApp shows the chat pre-filled. The visitor presses send.
+3. Shows a fallback with *Try again* and *send by email* links, in case the tab was
+   blocked or the visitor doesn't use WhatsApp.
 
-If the env vars are missing, the form fails gracefully with a message asking the
-visitor to email you directly (it doesn't crash or silently drop the message).
+The destination number is the `phone` field in `src/data/profile.json` (the same number
+shown in the Contact section). Change it there; no environment variables are needed.
+
+Trade-off: you only receive the enquiry if the visitor actually presses send in
+WhatsApp. Nothing is stored on the site.
 
 ## Google Analytics (optional)
 
@@ -102,10 +87,8 @@ entirely — nothing loads.
 1. Push this repo to GitHub.
 2. In Vercel: **New Project** → import the repo → framework preset auto-detects
    Next.js — no config needed.
-3. Add environment variables in **Project Settings → Environment Variables**:
-   - `TELEGRAM_BOT_TOKEN`
-   - `TELEGRAM_CHAT_ID`
-   - `NEXT_PUBLIC_GA_ID` (optional)
+3. Optionally add `NEXT_PUBLIC_GA_ID` in **Project Settings → Environment Variables**
+   to enable Google Analytics. Nothing else is required.
 4. Deploy. That's it — no database, no separate backend service to provision.
 5. Update `metadataBase` / sitemap URL in `src/app/layout.tsx` and
    `src/app/sitemap.ts` to your real production domain once you have one.
@@ -119,7 +102,7 @@ entirely — nothing loads.
   migration — worth planning as a deliberate upgrade rather than doing it inline here.
   Run `npm audit` before shipping to see current status.
 - **Case study screenshots:** `projects.json` has no image field yet. Add a
-  `screenshot` path per project and render it in the `Projects.tsx` modal once you
+  `screenshot` path per project and render it in the `Projects.tsx` detail panel once you
   have product screenshots to share (several listed projects are confidential
   client engagements, so screenshots may not be appropriate for all of them).
 - **CMS migration path:** the JSON-in-`src/data` structure is deliberately shaped so
@@ -129,6 +112,7 @@ entirely — nothing loads.
 - **Resume auto-sync:** today the PDF and the JSON content are updated independently.
   If they drift, the JSON wins (it's what renders). Keep both in sync manually when
   your resume changes.
-- **Rate limiting on the contact form:** since there's no database, there's no
-  server-side rate limiting beyond the honeypot field. If spam becomes an issue,
-  consider adding Vercel's edge rate limiting or a CAPTCHA (e.g. Cloudflare Turnstile).
+- **Guaranteed lead capture:** because the WhatsApp form relies on the visitor
+  pressing send, a submitted form is not a confirmed lead. If that matters, POST the
+  same message to a form service (Formspree, Web3Forms) or a serverless function
+  before opening WhatsApp.
