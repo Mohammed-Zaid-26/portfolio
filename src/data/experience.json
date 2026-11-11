@@ -5,7 +5,7 @@
     "period": "Aug 2025 – Present",
     "location": "Bengaluru, India",
     "current": true,
-    "summary": "Core Business Analyst across SAGINT OS, UIB and ESCRA — also Scrum Master for the delivery teams and AI Tools Officer for the company.",
+    "summary": "Core Business Analyst across SAGINT OS, UIB and ESCRA, and also Scrum Master for the delivery teams and AI Tools Officer for the company.",
     "responsibilities": [
       "Business Analyst: Served as a core Business Analyst across SAGINT OS, UIB, and ESCRA, leading requirement gathering, workflow definition, user story creation, stakeholder coordination, and functional documentation across enterprise and SaaS initiatives.",
       "Scrum Master: Facilitate daily scrum ceremonies for DevOps, UI/UX, QA, and active project teams, tracking progress, dependencies, blockers, and cross-functional coordination to support timely sprint delivery.",
@@ -13,7 +13,7 @@
     ],
     "projects": [
       {
-        "name": "SAGINT OS — Tokenized Compliance & Supply Chain Traceability Platform",
+        "name": "SAGINT OS: Tokenized Compliance & Supply Chain Traceability Platform",
         "points": [
           "Core BA for a confidential blockchain-enabled platform covering supply-chain traceability, tokenization, and compliance, owning requirements and workflow design end to end.",
           "Supported alignment with U.S. DFARS requirements through compliance documentation, requirement traceability, and structured functional specifications.",
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "name": "Unified Inbox — UAI SaaS Product",
+        "name": "Unified Inbox: UAI SaaS Product",
         "points": [
           "Gathered and documented business and functional requirements for enterprise clients.",
           "Created user stories, workflows, and feature specifications to support product enhancements.",
@@ -30,7 +30,7 @@
         ]
       },
       {
-        "name": "ESCRA — Blockchain-Based Platform",
+        "name": "ESCRA: Blockchain-Based Platform",
         "points": [
           "Served as the primary liaison between clients and development teams.",
           "Gathered and analyzed functional and technical requirements for blockchain workflows while supporting sprint planning, documentation, and scope alignment in an Agile environment."
@@ -80,7 +80,7 @@
     "tech": ["Business Analytics", "Requirements Gathering", "SaaS"]
   },
   {
-    "company": "Taipei Medical University — ICHIT Lab",
+    "company": "Taipei Medical University, ICHIT Lab",
     "role": "Research Intern",
     "period": "May 2024 – Jul 2024",
     "location": "Taipei, Taiwan",

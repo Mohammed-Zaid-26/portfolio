@@ -6,8 +6,8 @@ import Reveal from "./Reveal";
 import { BookOpen, Lock } from "lucide-react";
 import projects from "@/data/projects.json";
 
-/** "SAGINT OS — Tokenized Compliance…" -> "SAGINT OS" for the tab label. */
-const shortName = (name: string) => name.split(" — ")[0];
+/** "SAGINT OS: Tokenized Compliance…" -> "SAGINT OS" for the tab label. */
+const shortName = (name: string) => name.split(": ")[0];
 
 export default function Projects() {
   const [active, setActive] = useState(0);
@@ -43,7 +43,7 @@ export default function Projects() {
         <h2 className="section-heading mt-4">
           Every project, a <span className="text-highlight">story</span> worth telling.
         </h2>
-        <p className="mt-4 text-sm text-ink-500">Brief by design — several engagements sit under active NDAs.</p>
+        <p className="mt-4 text-sm text-ink-500">Brief by design: several engagements sit under active NDAs.</p>
       </Reveal>
 
       <Reveal className="mt-10 grid gap-4 md:grid-cols-[260px_1fr] md:gap-6" index={1}>
@@ -128,7 +128,7 @@ export default function Projects() {
                 {project.publication && (
                   <p className="mt-4 flex items-start gap-2 text-xs text-ink-400">
                     <BookOpen size={13} className="mt-px shrink-0" />
-                    Published — {project.publication.venue}, {project.publication.detail}
+                    Published in {project.publication.venue}, {project.publication.detail}
                   </p>
                 )}
 

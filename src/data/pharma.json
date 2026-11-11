@@ -1,16 +1,16 @@
 {
   "title": "Healthcare × Technology",
   "positioning": "Building at the intersection of business, technology and healthcare innovation.",
-  "statement": "I am passionate about exploring how technology, analytics, AI and product thinking can transform healthcare experiences — from digital health platforms to AI-driven clinical decision-making and data-driven care.",
+  "statement": "I am passionate about exploring how technology, analytics, AI and product thinking can transform healthcare experiences, from digital health platforms to AI-driven clinical decision-making and data-driven care.",
   "pillars": [
     { "label": "Digital Health Platforms", "detail": "Interest in the products and workflows that connect patients, clinicians and care teams." },
     { "label": "Healthcare Technology", "detail": "Research experience translating clinical/hospice datasets into predictive, actionable models." },
-    { "label": "Artificial Intelligence", "detail": "Applying ML to real health outcomes — mortality risk prediction, aging and chronic care innovation." },
+    { "label": "Artificial Intelligence", "detail": "Applying ML to real health outcomes: mortality risk prediction, aging and chronic care innovation." },
     { "label": "Data Analytics", "detail": "Turning healthcare data into visualized, decision-ready findings for research and product teams." },
     { "label": "Digital Transformation", "detail": "Bridging business requirements and engineering execution to bring digital health platforms to production." }
   ],
   "researchNote": {
-    "org": "Taipei Medical University — ICHIT Lab",
+    "org": "Taipei Medical University, ICHIT Lab",
     "detail": "Conducted mortality risk prediction using hospice datasets from AMOR wellness watches under a fully funded International Internship Pilot Program (IIPP), contributing to research papers and academic presentations on AI innovation for aging and chronic care."
   }
 }

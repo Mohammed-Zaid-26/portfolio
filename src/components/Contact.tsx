@@ -90,7 +90,7 @@ export default function Contact() {
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-600">
               I am always interested in discussions around innovative products, healthcare technology, startups and
-              digital transformation. Reach out directly — I read every message.
+              digital transformation. Reach out directly. I read every message.
             </p>
 
             <div className="mt-8 flex flex-col gap-3">

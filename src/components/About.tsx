@@ -10,7 +10,7 @@ import howithink from "@/data/howithink.json";
 const BUILD_ITEMS = [
   {
     title: "Business Solutions",
-    detail: "Requirements, workflows and stakeholder alignment that turn ambiguous asks into buildable specs — BRDs, FRDs, RTMs, user stories.",
+    detail: "Requirements, workflows and stakeholder alignment that turn ambiguous asks into buildable specs: BRDs, FRDs, RTMs, user stories.",
   },
   {
     title: "Digital Products",

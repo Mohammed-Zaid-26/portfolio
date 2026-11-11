@@ -18,7 +18,7 @@ const body = Source_Sans_3({
 });
 
 const siteUrl = "https://mohammedzaid.dev";
-const title = `${profile.name} — ${profile.titles.join(" | ")}`;
+const title = `${profile.name} | ${profile.titles.join(" | ")}`;
 const description = profile.positioning;
 
 export const metadata: Metadata = {

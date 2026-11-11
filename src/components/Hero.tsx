@@ -93,8 +93,8 @@ export default function Hero() {
 
           <motion.p variants={fadeUp} custom={3} className="mt-7 max-w-lg text-base leading-relaxed text-ink-600">
             I&apos;m the Business Analyst behind an AI-augmented enterprise inbox and a DFARS-aligned
-            blockchain compliance platform at AMT — with a healthcare AI research background, and Qedence,
-            a startup I&apos;m co-founding, running alongside it.
+            blockchain compliance platform at AMT. I bring a background in healthcare AI research, and I&apos;m
+            co-founding a startup, Qedence, alongside it.
           </motion.p>
 
           <motion.div variants={fadeUp} custom={4} className="mt-5 flex flex-wrap gap-2">

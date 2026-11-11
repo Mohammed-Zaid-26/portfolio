@@ -38,7 +38,7 @@
   {
     "category": "Delivery & Ways of Working",
     "color": "signal",
-    "description": "Running the sprint rhythm so requirements actually ship — as Scrum Master for DevOps, UI/UX and QA teams.",
+    "description": "Running the sprint rhythm so requirements actually ship, as Scrum Master for DevOps, UI/UX and QA teams.",
     "appliedIn": ["Advanced Millennium Technologies (AMT)"],
     "skills": [
       "Agile & Scrum",
@@ -55,7 +55,7 @@
     "category": "Technology Understanding",
     "color": "electric",
     "description": "Enough engineering fluency to write requirements that are actually buildable.",
-    "appliedIn": ["LifeSaver (MERN Stack)", "CodeHub"],
+    "appliedIn": ["Advanced Millennium Technologies (AMT)", "Qedence", "LifeSaver (MERN Stack)", "CodeHub"],
     "skills": [
       "HTML",
       "CSS",
@@ -90,7 +90,7 @@
     "category": "Analytics",
     "color": "vital",
     "description": "Reading data to make decisions defensible, not just plausible.",
-    "appliedIn": ["Taipei Medical University — ICHIT Lab", "Qedence"],
+    "appliedIn": ["Taipei Medical University, ICHIT Lab", "Qedence"],
     "skills": [
       "Business Analytics",
       "Data Analysis",
@@ -106,7 +106,7 @@
     "category": "Healthcare Innovation",
     "color": "vital",
     "description": "Applying ML and structured research to real clinical and aging-care outcomes.",
-    "appliedIn": ["Taipei Medical University — ICHIT Lab"],
+    "appliedIn": ["Taipei Medical University, ICHIT Lab"],
     "skills": [
       "Healthcare Data Analysis",
       "Mortality Risk Prediction (ML)",
