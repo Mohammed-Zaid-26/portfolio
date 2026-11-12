@@ -9,8 +9,8 @@ import { SHOW_QEDENCE } from "@/lib/visibility";
 
 const ALL_LINKS = [
   { href: "#about", label: "About" },
-  { href: "#experience", label: "Journey" },
   { href: "#skills", label: "Capability" },
+  { href: "#experience", label: "Journey" },
   { href: "#projects", label: "Work" },
   { href: "#certifications", label: "Learning" },
   { href: "#qedence", label: "Qedence" },
@@ -23,12 +23,36 @@ const LINKS = SHOW_QEDENCE ? ALL_LINKS : ALL_LINKS.filter((l) => l.href !== "#qe
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const ids = LINKS.map((l) => l.href.slice(1));
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+
+      // Scroll-spy: the active section is the one whose top most recently passed a line 35% down the viewport
+      // (by position, so it works whatever order the links are in). At the very bottom of the page the last
+      // section on the page wins, even if it is too short to reach that line.
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      const line = atBottom ? Infinity : window.innerHeight * 0.35;
+      let current: string | null = null;
+      let best = -Infinity;
+      for (const id of ids) {
+        const top = document.getElementById(id)?.getBoundingClientRect().top;
+        if (top !== undefined && top <= line && top > best) {
+          best = top;
+          current = id;
+        }
+      }
+      setActive(current);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   return (
@@ -43,16 +67,30 @@ export default function Navbar() {
         </a>
 
         <div className="hidden items-center gap-7 lg:flex">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="group relative text-[13px] font-medium text-ink-600 transition-colors hover:text-ink-950"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-ink-950 transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
+          {LINKS.map((link) => {
+            const isActive = active === link.href.slice(1);
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "location" : undefined}
+                className={`group relative text-[13px] font-medium transition-colors hover:text-ink-950 ${
+                  isActive ? "text-ink-950" : "text-ink-600"
+                }`}
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-ink-950 transition-all duration-300 group-hover:w-full" />
+                {isActive && (
+                  // Slides from link to link as the reader scrolls
+                  <motion.span
+                    layoutId="nav-active-underline"
+                    className="absolute -bottom-1.5 left-0 h-0.5 w-full rounded-full bg-electric-600 dark:bg-electric-400"
+                    transition={{ type: "spring", stiffness: 380, damping: 34 }}
+                  />
+                )}
+              </a>
+            );
+          })}
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -91,7 +129,12 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-sm font-medium text-ink-800 hover:bg-ink-950/[0.03]"
+                  aria-current={active === link.href.slice(1) ? "location" : undefined}
+                  className={`rounded-lg px-3 py-3 text-sm font-medium hover:bg-ink-950/[0.03] ${
+                    active === link.href.slice(1)
+                      ? "bg-electric-500/10 text-electric-700 dark:text-electric-300"
+                      : "text-ink-800"
+                  }`}
                 >
                   {link.label}
                 </a>

@@ -80,6 +80,13 @@ export default function Contact() {
     setFallback(null);
   }
 
+  /** Clears the form after sending. Kept manual so a blocked or abandoned WhatsApp send never loses the message. */
+  function startNewMessage() {
+    formRef.current?.reset();
+    setFallback(null);
+    (formRef.current?.elements.namedItem("full-name") as HTMLInputElement | null)?.focus();
+  }
+
   return (
     <footer id="contact" className="relative w-full scroll-mt-24 bg-paper-200">
       <div className="mx-auto w-full max-w-6xl px-6 py-10 sm:py-16 md:px-10">
@@ -208,6 +215,13 @@ export default function Contact() {
                       send by email
                     </a>
                     .
+                    <button
+                      type="button"
+                      onClick={startNewMessage}
+                      className="mt-2 block w-full text-center font-semibold text-electric-600 underline-offset-4 hover:underline dark:text-electric-400"
+                    >
+                      Start a new message
+                    </button>
                   </span>
                 )}
               </div>
